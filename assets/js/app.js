@@ -1,6 +1,10 @@
-
-//dropbtn
 /*
+function exit() {
+	document.getElementById("myDropdown").classList.toggle("show");
+}*/
+
+
+//Drop
 function myFunction() {
 	document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -18,4 +22,3 @@ window.onclick = function(event) {
 		}
 	}
 }
-*/
