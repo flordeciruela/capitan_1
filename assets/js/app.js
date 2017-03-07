@@ -1,8 +1,3 @@
-/*
-function exit() {
-	document.getElementById("myDropdown").classList.toggle("show");
-}*/
-
 
 //Drop
 function myFunction() {
