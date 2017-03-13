@@ -1,77 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
-    <title>El Capitan</title>
-  </head>
-  <body style="margin-top: 0px; margin-left: 90px; margin-right: 90px;">
-    <header align="right">
-        <div class="dropdown">Hola Coder
-	      <button onclick="myFunction()" class="dropbtn">&#9776;</button>
-	      <div id="myDropdown" class="dropdown-content">
-		  <a href="coders.html">Perfil</a>
-		  <a href="exit.html">Salir</a>
-	</div>
-  </div>
-        <div align="center">
-        <img src="assets/images/logo.png" alt="">
-        </div>
-    </header>
-    <h3>¿Qué es Laboratoria?</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    <h5>Temas:</h5>
-    <div class="botones">
+      <head>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="assets/css/main.css">
+            <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+            <title>El Capitan</title>
+      </head>
+      <body style="margin-top: 0px; margin-left: 90px; margin-right: 90px;">
+            <header align="right">
+                <div class="dropdown">Hola <label id="usuario"></label>
+        	            <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+        	      <div id="myDropdown" class="dropdown-content">
+                		  <a href="coders.html" id="coders">Perfil</a>
+                		  <a href="exit.html" id="salir">Salir</a>
+              	</div>
+                </div>
+                <div align="center">
+                      <img src="assets/images/logo.png" alt="">
+                </div>
+            </header>
+            <section class="content">
+              <h2>¿Qué es Laboratoria?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea harum doloribus iusto, ex ipsam praesentium in culpa voluptas similique optio quibusdam excepturi eos, error soluta veniam eum itaque vel odio!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea harum doloribus iusto, ex ipsam praesentium in culpa voluptas similique optio quibusdam excepturi eos, error soluta veniam eum itaque vel odio!</p>
+              <h5>Temas</h5>
+              <input type="button" value="Sprint 1" onclick="mostrar('sprint-1')">
+              <input type="button" value="Sprint 2" onclick="mostrar('sprint-2')">
+              <input type="button" value="Sprint 3" onclick="mostrar('sprint-3')">
+              <div id="sprint-1" class="hidden">
+                <br>
+                <h3>Sprint 1 : Introducción a JavaSript</h3>
+                <ol>
+                  <li>Fundamentos de Programación</li>
+                  <li>Funciones</li>
+                  <li>Arreglos</li>
+                  <li>Objetos</li>
+                </ol>
+                <br>
+                <hr>
+                <h3>Quiz</h3>
+                <div id="contenedor-quiz1">
+                  <form>
+                    <h4>Existen dos tipos de funciones</h4>
+                    <input type="radio" name="answer" value="answer1" class="quiz-1"> Expresadas y declaradas<br>
+                    <input type="radio" name="answer" value="answer2" class="quiz-1"> Explícitas y declaradas<br>
+                    <input type="radio" name="answer" value="answer3" class="quiz-1"> Expresadas y derivadas
+                  </form>
+                  <form>
+                    <h4>Elije una propiedad de los arreglos</h4>
+                    <input type="radio" name="answer" value="answer1" class="quiz-1"> clear<br>
+                    <input type="radio" name="answer" value="answer2" class="quiz-1"> pop<br>
+                    <input type="radio" name="answer" value="answer3" class="quiz-1"> add
+                  </form>
+                  <form>
+                    <h4>Un objeto tiene ________ y _________</h4>
+                    <input type="radio" name="answer" value="answer1" class="quiz-1"> números y letras<br>
+                    <input type="radio" name="answer" value="answer2" class="quiz-1"> partes y validaciones<br>
+                    <input type="radio" name="answer" value="answer3" class="quiz-1"> propiedades y valores
+                  </form>
+                  <br>
+                  <input type="submit" value="ENVIAR" id="enviar-sprint1">
+                </div>
+              </div>
+              <div id="sprint-2">
+                <br>
+                <h3>Sprint 2 : Introducción al desarrollo web y construcción de páginas web</h3>
+                <ol>
+                  <li>Ciclo de vida del desarrollo web y arquitectura básica cliente/servidor / Configuración del ambiente de trabajo e introducción a git.</li>
+                  <li>HTML y Javascript en el navegador</li>
+                  <li>Manejo de comandos básicos de git en la terminal </li>
+                  <li>Pruebas unitarias</li>
+                  <li>Git / Resolucion de conflictos / Branching model</li>
+                  <li>DOM</li>
+                </ol>
+                <br>
+                <hr>
+                <h3>Quiz</h3>
+                <div id="contenedor-quiz2" class="show">
+                  <form>
+                    <h4>¿Cuál es el comando para iniciar un repositorio desde la consola?</h4>
+                    <input type="radio" name="answer" value="answer1" class="quiz-2"> git init .<br>
+                    <input type="radio" name="answer" value="answer2" class="quiz-2"> git init<br>
+                    <input type="radio" name="answer" value="answer3" class="quiz-2"> git init add
+                  </form>
+                  <form>
+                    <h4>¿Cuál es la finalidad de hacer una prueba unitaria?</h4>
+                    <input type="radio" name="answer" value="answer1" class="quiz-2"> Comprobar que el código funciona correctamente<br>
+                    <input type="radio" name="answer" value="answer2" class="quiz-2"> Darle valores a los parámetros de dichas funciones<br>
+                    <input type="radio" name="answer" value="answer3" class="quiz-2"> No tiene ningún fin
+                  </form>
+                  <form>
+                    <h4>¿Qué significa DOM?</h4>
+                    <input type="radio" name="answer" value="answer1" class="quiz-2"> Dual Objet Model<br>
+                    <input type="radio" name="answer" value="answer3" class="quiz-2"> Document Objet Model<br>
+                    <input type="radio" name="answer" value="answer2" class="quiz-2"> Document Obsolet Model
+                  </form>
+                  <br>
+                  <input type="submit" value="ENVIAR" id="enviar-sprint2">
+                </div>
+              </div>
+              <div id="sprint-3" class="hidden">
+                <br>
+                <h3>Sprint 3</h3>
+                <p>No hay lecciones (Todavía)</p>
+              </div>
+            </section>
 
-    <input type="button" name="" value="Sprint 1">
-    <input type="button" name="" value="Sprint 2">
-    <input type="button" name="" value="Sprint 3">
+            <script src="assets/js/app.js" charset="utf-8"></script>
+            <script src="assets/js/coders.js" charset="utf-8"></script>
 
-    </div>
-
-<div id="sprint1">
-  <h3>Sprint 1: Introducción al desarrollo web y construcción de páginas web</h3>
-  <ol type=”1”>
-<li> Flujo típico del desarrollo web </li>
-<li> Profundización en HTML </li>
-<li> HTML5: etiquetas y semántica </li>
-<li> Comprender JavaScript en el navegador vs. en la consola </li>
-<li> Lectura y modificación del DOM </li>
-<li> Navegación del DOM y modificación de atributos </li>
-</ol>
-<br>
-<hr>
-<h3>Quiz</h3>
-<div id="quiz1">
-    <strong>¿Cuál es el comando para iniciar un repositorio desde la consola?</strong>
-<br>
-<br>
-    <input type="radio" name="q1" value="1">git init.<br>
-    <input type="radio" name="q1" value="2">git init<br>
-    <input type="radio" name="q1" value="3">git add<br>
-
-    <p><strong>¿Cuál es la finalidad de hacer una prueba unitaria?</strong></p>
-    <input type="radio" name="q2" value="1">Comprobar que el codigo funciona correctamente<br>
-    <input type="radio" name="q2" value="2">Darle valores a los parámetros de dichas funciones<br>
-    <input type="radio" name="q2" value="3">No tiene ningun fin<br>
-
-    <p><strong>¿Qué significa DOM?</strong></p>
-    <input type="radio" name="q2" value="1">Dual Objet Model<br>
-    <input type="radio" name="q2" value="2">Document Object Model<br>
-    <input type="radio" name="q2" value="3">Document Obsolet Model<br>
-<br>
-    <div>
-    <input type="button" name="" value="ENVIAR">
-    </div>
-</div>
-</div>
-
-<div id="result">
-</div>
-
-    <script src="assets/js/app.js" charset="utf-8"></script>
-
-  </body>
+     </body>
 </html>
