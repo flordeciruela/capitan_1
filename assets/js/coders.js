@@ -17,4 +17,6 @@ mostrarCoders = () => {
 										 									}
 								};mostrarCoders();
 
-home = () => { document.location.href = "index.html?nombre="+myParam; }
+home = () => {
+	document.location.href = "index.html?nombre="+myParam;
+}

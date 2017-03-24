@@ -16,17 +16,17 @@
         <div class="div-coder"></div>
         <div class="div-coder"></div>
 
-      <button type="button" class="boton-volver-inicio" id="return" onclick="home()">Regresa al inicio</button>
+        <button type="button" class="boton-volver-inicio" id="return" onclick="home()">Regresa al inicio</button>
 
-      <script>
-            var myParam = location.search.split('nombre=')[1]
-            document.getElementById("return").addEventListener('click',function(e) {
-            this.href += "?nombre="+nombre.innerHTML;
-          });
-      </script>
+        <script>
+              var myParam = location.search.split('nombre=')[1]
+              document.getElementById("return").addEventListener('click',function(e) {
+              this.href += "?nombre="+nombre.innerHTML;
+            });
+        </script>
 
-      <script src="assets/js/coders.js" charset="utf-8"></script>
-      <script src="assets/js/app.js" charset="utf-8"></script>
+        <script src="assets/js/coders.js" charset="utf-8"></script>
+        <script src="assets/js/app.js" charset="utf-8"></script>
 
   </body>
 </html>
